@@ -37,7 +37,7 @@ export class AlertProvider {
       title: title,
       message: message,
       buttons: [
-        //é criado o texto e a ação(handler), o role 'Cancel' nesse caso faz com que a cor do botão fique vermelha (sim, é necessário colocar o 'Cancel' também!)
+        //é criado o texto e a ação(handler), o role 'Cancel' nesse caso faz com que a cor do botão fique vermelha (sim, é necessário colocar o 'Cancel' também! )
         { text: "Não", role: 'Cancel',  handler: () => { console.log('Confirm:Say:no') } },
         { text: "Sim", handler: () => {//aqui é executado o que a pessoa mandar na hr
           callback();

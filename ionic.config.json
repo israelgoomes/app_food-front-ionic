@@ -1,5 +1,7 @@
 {
   "name": "app_food-front-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

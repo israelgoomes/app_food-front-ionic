@@ -15,7 +15,7 @@ export class SpinnerProvider {
   constructor(public loading: LoadingController) {}
 
   //criando um método para chamar a spinner
-  Show(message: string): void {
+  show(message: string): void {
     if (!this.spinner) {
       /*Se o spinner for vazio irá entrar nessa condição.
       aqui adiciona ao spinner um create do loading do ionic, e no content dele é adicionado uma message que foi declarada no método, caso a informação venha nula irá aparecer 'Carregando...' */
@@ -29,7 +29,7 @@ export class SpinnerProvider {
   }
 
   //criando o método hide para esconder quando necessário
-  Hide(): void {
+  hide(): void {
     if (this.spinner) {
       this.spinner.dismiss();
       this.spinner = null;
