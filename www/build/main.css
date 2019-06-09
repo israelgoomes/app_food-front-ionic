@@ -13543,16 +13543,16 @@ ion-textarea {
 }
 
 .text-input::-moz-placeholder {
-  color: #999;
+  color: #fff;
 }
 
 .text-input:-ms-input-placeholder {
-  color: #999;
+  color: #fff;
 }
 
 .text-input::-webkit-input-placeholder {
   text-indent: 0;
-  color: #999;
+  color: #fff;
 }
 
 textarea.text-input {
@@ -27988,4 +27988,42 @@ ion-navbar.toolbar {
 .wp .tabs:not(.tabs-ios[tabsPlacement='top']) ion-footer .toolbar:last-child {
   padding-bottom: 4px;
   min-height: 46px;
+}
+
+page-login ion-content {
+  background: url(../../assets//imagens/fundo.jpg);
+  background-size: cover;
+}
+
+page-login .logo {
+  width: 100%;
+  text-align: center;
+}
+
+page-login .logo img {
+  width: 120px;
+}
+
+page-login .item {
+  background: transparent;
+}
+
+page-login .red {
+  background-color: rgba(189, 8, 28, 0.8);
+  height: 100%;
+  padding: 20px;
+  padding-top: 40%;
+}
+
+page-login .logo span {
+  color: white;
+  font-size: 1.8rem;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+}
+
+page-login .list-md .item-input:last-child {
+  border-bottom: none !important;
 }
