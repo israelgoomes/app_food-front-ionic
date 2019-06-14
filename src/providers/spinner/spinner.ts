@@ -20,7 +20,7 @@ export class SpinnerProvider {
       /*Se o spinner for vazio irá entrar nessa condição.
       aqui adiciona ao spinner um create do loading do ionic, e no content dele é adicionado uma message que foi declarada no método, caso a informação venha nula irá aparecer 'Carregando...' */
 
-      this.spinner = this.loading.create({ content: message || "Carregando" });
+      this.spinner = this.loading.create({ content: message || "Carregando..." });
       //
       this.spinner.present();
     } else {

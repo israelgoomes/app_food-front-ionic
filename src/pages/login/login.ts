@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { usuarioProvider } from '../../providers/usuario/usuario';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,15 +16,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  form: any ={
+
+  };
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private usuarioSrv: usuarioProvider
+    ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  abrirCategoria(): void {
-    this.navCtrl.setRoot('CategoriaPage')
-  }
+async login(): Promise<void> {
+ let result = await this.usuarioSrv.autenticate(this.form.email, this.form.senha);
+console.log(result);
+if(result.success){
+  //enviar para rota certa;
+}
+}
 
+abrirCadastro(){
+  this.navCtrl.setRoot('CadastroPage');
+}
 }

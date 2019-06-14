@@ -1,28 +1,27 @@
-<ion-content >
-<div class="red">
+<ion-content padding class="backImage">
 <div class="logo">
 
   <img src="../../assets/imagens/icon-branco.png" alt="">
   <span>NoFood</span>
 </div>
 
-  <ion-list no-lines>
+  <ion-list no-lines class="list-transparent">
     <ion-item>
-      <ion-input type="text" placeholder="Email"></ion-input>
+      <ion-input [(ngModel)]="form.email" type="text" placeholder="Email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" placeholder="Senha"></ion-input>
+      <ion-input [(ngModel)]="form.senha" type="password" placeholder="Senha"></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-grid>
     <ion-row>
-      <button ion-button block color="secondary" round (click)="abrirCategoria()">
+      <button ion-button block color="secondary" round (click)="login()">
         Efeturar Login
       </button>
     </ion-row>
     <ion-row>
-      <button ion-button block outline color="secondary" round>Cadastrar-se</button>
+      <button ion-button block outline color="secondary" round (click)="abrirCadastro()">Cadastrar-se</button>
     </ion-row>
   </ion-grid>
 
@@ -32,5 +31,4 @@
     </ion-row>
   </ion-grid>
 
-</div>
 </ion-content>
