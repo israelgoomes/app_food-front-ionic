@@ -26,4 +26,7 @@ abrirProduto(): void {
   this.navCtrl.setRoot('TabsPage')
 }
 
+gerenciarCategoria(){
+  this.navCtrl.push('CategoriasPage')
+}
 }

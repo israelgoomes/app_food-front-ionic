@@ -1,9 +1,10 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { AlertProvider } from "../alert/alert";
 import { SpinnerProvider } from "../spinner/spinner";
 import { NetworkProvider } from "../network/network";
 import { httpResultModel } from "../../app/models/httpResultModel";
+import { usuarioProvider } from '../usuario/usuario';
 
 /*
   Generated class for the HttpProvider provider.
@@ -26,13 +27,34 @@ export class HttpProvider {
   //tirar o loader
   //resolve
 
+
+
+//criando o esquema para pegar o token e ter permissão de get, post, put ao logar.
+public createHeader(header?: HttpHeaders): HttpHeaders{
+    if(!header){
+      header = new HttpHeaders();
+    }
+//dizendo que quer que seja trafegado http o aplication json
+header = header.append('Content-Type', 'application/json');
+//dizendo que só vai aceitar se for json
+header = header.append('Accept', 'application/json')
+
+let token = usuarioProvider.getTokenAccess;
+if(token){
+  header = header.append('user-token', token);
+}
+
+    return header;
+}
+
+
   public get(url: string): Promise<httpResultModel> {
     this.spinnerSrvc.show("Carregando os dados ...");
-
+    let header = this.createHeader();
     return new Promise(resolve => {
       if (this.networkSrvc.isOnline) {
         //método http do angular
-        this.http.get(url).subscribe(
+        this.http.get(url, {headers: header}).subscribe(
           _res => {
             this.spinnerSrvc.hide();
             resolve({ success: true, data: _res, err: undefined });
@@ -58,6 +80,7 @@ export class HttpProvider {
   }
   //--------------------------POST---------------------------------------------
   public post(url: string, model: any): Promise<httpResultModel> {
+    
     this.spinnerSrvc.show("Salvando informações...");
     return new Promise(resolve => {
       if (this.networkSrvc.isOnline) {

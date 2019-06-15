@@ -35,6 +35,9 @@ async login(): Promise<void> {
  let result = await this.usuarioSrv.autenticate(this.form.email, this.form.senha);
 console.log(result);
 if(result.success){
+  //usando o usuarioProvider direto pq o método RegisteLogin é estático
+  usuarioProvider.RegisterLogin(result.data);
+  this.navCtrl.setRoot('CategoriaPage')
   //enviar para rota certa;
 }
 }

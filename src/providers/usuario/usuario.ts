@@ -29,7 +29,25 @@ url: string = `${configHelper.url}usuario`
     return this.http.post(`${this.url}/autenticar`, {email:email, senha:senha});
   }
   async register(usuario: usuarioModel): Promise<httpResultModel>{
+    console.log('Usuario Provider');
     return this.http.post(`${this.url}/register`, usuario);
+  }
+
+  //sem isso o não vai ser possível dar um get ou acessar qualquer rota que tenha a autenticação
+  //salvando informações de login no local storage
+  static RegisterLogin(result: any){
+    localStorage.setItem(configHelper.storageKeys.token, result.token);
+    //transformando o user em string, se não aparece como objeto na hr de exibir no nofood.user
+    localStorage.setItem(configHelper.storageKeys.user, JSON.stringify(result.usuario));
+  } 
+
+static get getTokenAccess(): string{
+  return localStorage.getItem(configHelper.storageKeys.token);
+}
+
+  //verificando se o usuario está logado, e se sim, não precisará entrar na tela de login novamente
+  static get isLogado(): boolean{
+    return (localStorage.getItem(configHelper.storageKeys.token) != undefined);
   }
 
 }

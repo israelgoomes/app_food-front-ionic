@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 282:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeusPedidosPageModule", function() { return MeusPedidosPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MinhaContaPageModule", function() { return MinhaContaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__meus_pedidos__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__minha_conta__ = __webpack_require__(298);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MeusPedidosPageModule = /** @class */ (function () {
-    function MeusPedidosPageModule() {
+var MinhaContaPageModule = /** @class */ (function () {
+    function MinhaContaPageModule() {
     }
-    MeusPedidosPageModule = __decorate([
+    MinhaContaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__meus_pedidos__["a" /* MeusPedidosPage */],
+                __WEBPACK_IMPORTED_MODULE_2__minha_conta__["a" /* MinhaContaPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__meus_pedidos__["a" /* MeusPedidosPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__minha_conta__["a" /* MinhaContaPage */]),
             ],
         })
-    ], MeusPedidosPageModule);
-    return MeusPedidosPageModule;
+    ], MinhaContaPageModule);
+    return MinhaContaPageModule;
 }());
 
-//# sourceMappingURL=meus-pedidos.module.js.map
+//# sourceMappingURL=minha-conta.module.js.map
 
 /***/ }),
 
-/***/ 290:
+/***/ 298:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MeusPedidosPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MinhaContaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the MeusPedidosPage page.
+ * Generated class for the MinhaContaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MeusPedidosPage = /** @class */ (function () {
-    function MeusPedidosPage(navCtrl, navParams) {
+var MinhaContaPage = /** @class */ (function () {
+    function MinhaContaPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    MeusPedidosPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MeusPedidosPage');
+    MinhaContaPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MinhaContaPage');
     };
-    MeusPedidosPage = __decorate([
+    MinhaContaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-meus-pedidos',template:/*ion-inline-start:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\meus-pedidos\meus-pedidos.html"*/'<!--\n  Generated template for the MeusPedidosPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>meusPedidos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\meus-pedidos\meus-pedidos.html"*/,
+            selector: 'page-minha-conta',template:/*ion-inline-start:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\minha-conta\minha-conta.html"*/'<!--\n  Generated template for the MinhaContaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>minhaConta</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\minha-conta\minha-conta.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], MeusPedidosPage);
-    return MeusPedidosPage;
+    ], MinhaContaPage);
+    return MinhaContaPage;
 }());
 
-//# sourceMappingURL=meus-pedidos.js.map
+//# sourceMappingURL=minha-conta.js.map
 
 /***/ })
 
