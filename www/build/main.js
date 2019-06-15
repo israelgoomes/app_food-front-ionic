@@ -93,11 +93,11 @@ webpackEmptyAsyncContext.id = 113;
 var map = {
 	"../pages/adm-categoria/adm-categorias.module": [
 		281,
-		9
+		2
 	],
 	"../pages/adm-categorias/categorias.module": [
 		282,
-		8
+		9
 	],
 	"../pages/cadastro/cadastro.module": [
 		283,
@@ -105,23 +105,23 @@ var map = {
 	],
 	"../pages/categoria/categoria.module": [
 		284,
-		7
+		8
 	],
 	"../pages/login/login.module": [
 		285,
-		6
+		7
 	],
 	"../pages/meus-pedidos/meus-pedidos.module": [
 		286,
-		5
+		6
 	],
 	"../pages/minha-conta/minha-conta.module": [
 		287,
-		4
+		5
 	],
 	"../pages/produtos/produtos.module": [
 		288,
-		3
+		4
 	],
 	"../pages/tab-categoria/tab-categoria.module": [
 		289,
@@ -129,7 +129,7 @@ var map = {
 	],
 	"../pages/tabs/tabs.module": [
 		290,
-		2
+		3
 	]
 };
 function webpackAsyncContext(req) {

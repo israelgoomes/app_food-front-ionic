@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 290:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdmCategoriasPageModule", function() { return AdmCategoriasPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__adm_categorias__ = __webpack_require__(292);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsPageModule = /** @class */ (function () {
-    function TabsPageModule() {
+var AdmCategoriasPageModule = /** @class */ (function () {
+    function AdmCategoriasPageModule() {
     }
-    TabsPageModule = __decorate([
+    AdmCategoriasPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__adm_categorias__["a" /* AdmCategoriasPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__adm_categorias__["a" /* AdmCategoriasPage */]),
             ],
         })
-    ], TabsPageModule);
-    return TabsPageModule;
+    ], AdmCategoriasPageModule);
+    return AdmCategoriasPageModule;
 }());
 
-//# sourceMappingURL=tabs.module.js.map
+//# sourceMappingURL=adm-categorias.module.js.map
 
 /***/ }),
 
-/***/ 301:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdmCategoriasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_models_categoriaModel__ = __webpack_require__(293);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,44 +57,54 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Generated class for the TabsPage page.
+ * Generated class for the AdmCategoriasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var TabsPage = /** @class */ (function () {
-    function TabsPage(navCtrl, navParams, app) {
+var AdmCategoriasPage = /** @class */ (function () {
+    function AdmCategoriasPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.app = app;
-    }
-    TabsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TabsPage');
-    };
-    TabsPage.prototype.selecionarCategoria = function (event) {
-        //criando uma variável para pegar a navegacao Anterior, usando o event criado no ionselect das tabs, e através dele
-        //pegando o tamanho history do linker e lista o histórico de navegação e subtraindo 2 para chegar até a página que queremos, no caso a categoria.(Aula 21-Definindo layout)
-        var navegacaoAnterior = event.linker._history[event.linker._history.length - 2];
-        console.log('ultimo', navegacaoAnterior);
-        console.log('Tab', event);
-        console.log(event.tabTitle);
-        if (navegacaoAnterior != '/categoria') {
-            this.app.getRootNav().setRoot('CategoriaPage');
+        var _categ = this.navParams.get('_categoria');
+        if (_categ) {
+            this.categoria = _categ;
         }
+        else {
+            this.categoria = new __WEBPACK_IMPORTED_MODULE_2__app_models_categoriaModel__["a" /* categoriaModel */]();
+        }
+    }
+    AdmCategoriasPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdmCategoriasPage');
     };
-    TabsPage = __decorate([
+    AdmCategoriasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\tabs\tabs.html"*/'<ion-tabs>\n<ion-tab tabIcon="pricetags" tabTitle="categorias" (ionSelect)="selecionarCategoria($event)" [root]="\'ProdutosPage\'" ></ion-tab>\n<ion-tab tabIcon="menu" tabTitle="Meus pedidos" [root]="\'MeusPedidosPage\'" ></ion-tab>\n<ion-tab tabIcon="contact" tabTitle="Minha conta" [root]="\'MinhaContaPage\'" ></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\tabs\tabs.html"*/,
+            selector: 'page-adm-categorias',template:/*ion-inline-start:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\adm-categoria\adm-categorias.html"*/'<!--\n  Generated template for the AdmCategoriasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Categoria</ion-title>\n    <ion-buttons right>\n        <button ion-button clear>\n          salvar\n        </button>\n        <button ion-button icon-only>\n          <ion-icon name="trash"></ion-icon>\n        </button>  \n    </ion-buttons>\n    \n  </ion-navbar>\n</ion-header>\n\n<ion-content no-padding>\n  <ion-list no-lines>\n   \n    <ion-item>\n      <ion-label floating >Título</ion-label>\n      <ion-input type="text" [(ngModel)]="categoria.titulo" ></ion-input>\n    </ion-item>\n    <ion-item >\n    <ion-textarea [(ngModel)]="categoria.descricao" rows="4" placeholder="Adicione a descrição  da sua categoria"></ion-textarea>\n  </ion-item>\n<ion-item text-center>\n  <button ion-button clear><ion-icon name="camera" item-left></ion-icon> Selecionar Foto</button>\n</ion-item>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\adm-categoria\adm-categorias.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]])
-    ], TabsPage);
-    return TabsPage;
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], AdmCategoriasPage);
+    return AdmCategoriasPage;
 }());
 
-//# sourceMappingURL=tabs.js.map
+//# sourceMappingURL=adm-categorias.js.map
+
+/***/ }),
+
+/***/ 293:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return categoriaModel; });
+var categoriaModel = /** @class */ (function () {
+    function categoriaModel() {
+    }
+    return categoriaModel;
+}());
+
+//# sourceMappingURL=categoriaModel.js.map
 
 /***/ })
 
