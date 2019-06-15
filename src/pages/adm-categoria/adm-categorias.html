@@ -5,11 +5,34 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>admCategorias</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Categoria</ion-title>
+    <ion-buttons right>
+        <button ion-button clear>
+          salvar
+        </button>
+        <button ion-button icon-only>
+          <ion-icon name="trash"></ion-icon>
+        </button>  
+    </ion-buttons>
+    
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content no-padding>
+  <ion-list no-lines>
+   
+    <ion-item>
+      <ion-label floating >Título</ion-label>
+      <ion-input type="text" [(ngModel)]="categoria.titulo" ></ion-input>
+    </ion-item>
+    <ion-item >
+    <ion-textarea [(ngModel)]="categoria.descricao" rows="4" placeholder="Adicione a descrição  da sua categoria"></ion-textarea>
+  </ion-item>
+<ion-item text-center>
+  <button ion-button clear><ion-icon name="camera" item-left></ion-icon> Selecionar Foto</button>
+</ion-item>
+
+  </ion-list>
 
 </ion-content>

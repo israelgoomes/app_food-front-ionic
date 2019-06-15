@@ -3,7 +3,7 @@
   <ion-navbar color="primary">
     <ion-title>categorias</ion-title>
     <ion-buttons right>
-  <button ion-button icon-only>
+  <button ion-button icon-only (click)="addOrEdit({})">
     <ion-icon name="add"></ion-icon>
   </button>
     </ion-buttons>
@@ -11,8 +11,8 @@
 </ion-header>
 
 <ion-content no-padding>
-<ion-list no-lines>
-  <ion-item *ngFor="let item of lista"> 
+<ion-list lines>
+  <ion-item *ngFor="let item of lista" text-wrap (click)="addOrEdit(item)"> 
     {{item.titulo}}
   </ion-item>
 </ion-list>

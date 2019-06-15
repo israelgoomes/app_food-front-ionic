@@ -123,15 +123,17 @@ var CategoriasPage = /** @class */ (function () {
             });
         });
     };
+    CategoriasPage.prototype.addOrEdit = function (model) {
+        this.navCtrl.push('AdmCategoriasPage', { _categoria: model });
+    };
     CategoriasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-categorias',template:/*ion-inline-start:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\adm-categorias\categorias.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>categorias</ion-title>\n    <ion-buttons right>\n  <button ion-button icon-only>\n    <ion-icon name="add"></ion-icon>\n  </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-padding>\n<ion-list no-lines>\n  <ion-item *ngFor="let item of lista"> \n    {{item.titulo}}\n  </ion-item>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\adm-categorias\categorias.html"*/,
+            selector: 'page-categorias',template:/*ion-inline-start:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\adm-categorias\categorias.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>categorias</ion-title>\n    <ion-buttons right>\n  <button ion-button icon-only (click)="addOrEdit({})">\n    <ion-icon name="add"></ion-icon>\n  </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-padding>\n<ion-list lines>\n  <ion-item *ngFor="let item of lista" text-wrap (click)="addOrEdit(item)"> \n    {{item.titulo}}\n  </ion-item>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\lsrael\Desktop\Ionic-Projects\NoFood_apk\app_food-front-ionic\src\pages\adm-categorias\categorias.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_categoria_categoria__["a" /* CategoriaProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_categoria_categoria__["a" /* CategoriaProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_categoria_categoria__["a" /* CategoriaProvider */]) === "function" && _c || Object])
     ], CategoriasPage);
     return CategoriasPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=categorias.js.map

@@ -33,5 +33,8 @@ lista: Array<categoriaModel> = new Array<categoriaModel>();
       this.lista = <Array<categoriaModel>>categoriaResult.data;
     }
   }
+addOrEdit(model?: categoriaModel): void{
+      this.navCtrl.push('AdmCategoriasPage', {_categoria: model})
+}
 
 }
